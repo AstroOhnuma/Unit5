@@ -15,13 +15,10 @@ redbackground = RectangleAsset(600,600,blackoutline,red)
 greenbackground = RectangleAsset(600,600,blackoutline,green)
 bluebackground = RectangleAsset(600,600,blackoutline,blue)
 
+colors = [redbackground, greenbackground, bluebackground]
+
 def mouseclick(event):
-    num = randint(1,3)
-    if num == 1:
-        Sprite(redbackground)
-    elif num == 2:
-        Sprite(greenbackground)
-    elif num == 3:
-        Sprite(bluebackground)
+    num = randint(0,2)
+    Sprite(colors[num])
 App().listenMouseEvent('click', mouseclick)
 App().run()
