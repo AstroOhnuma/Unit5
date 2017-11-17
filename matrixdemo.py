@@ -10,3 +10,10 @@ def printboard():
             print(board[row][col],' ',end = '')
         print()
 printboard()
+
+row = int(input('Enter a row number: '))
+col = int(input('Enter a column number: '))
+
+board[row-1][col-1] = 'X'
+
+printboard()
