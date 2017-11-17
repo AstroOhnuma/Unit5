@@ -9,3 +9,4 @@ def printboard():
         for col in range(0,3):
             print(board[row][col],' ',end = '')
         print()
+printboard()
