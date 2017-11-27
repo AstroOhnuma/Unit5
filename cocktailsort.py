@@ -1,15 +1,40 @@
 #Astro Ohnuma
 #11/27/17
-#sorting.py - code to test a sorting function
+#cocktailsort.py - implementation of cocktail sort
 
 from random import randint
 from time import time
 
 N = 100 #how many numbers will be sorted
+'''
+procedure cocktailShakerSort( A : list of sortable items ) defined as:
+  do
+    swapped := false
+    for each i in 0 to length( A ) - 2 do:
+      if A[ i ] > A[ i + 1 ] then // test whether the two elements are in the wrong order
+        swap( A[ i ], A[ i + 1 ] ) // let the two elements change places
+        swapped := true
+      end if
+    end for
+    if not swapped then
+      // we can exit the outer loop here if no swaps occurred.
+      break do-while loop
+    end if
+    swapped := false
+    for each i in length( A ) - 2 to 0 do:
+      if A[ i ] > A[ i + 1 ] then
+        swap( A[ i ], A[ i + 1 ] )
+        swapped := true
+      end if
+    end for
+  while swapped // if no elements have been swapped, then the list is sorted
+end procedure'''
 
-def mySort(L):
-    #put your code here
-    return L
+def mySort(A):
+    swapped = True
+    while swapped:
+        swapped = False
+    return A
 
 if __name__ == '__main__':
     
@@ -31,16 +56,3 @@ if __name__ == '__main__':
         print('Your sort took', t2-t1, 'seconds')
     except:
         print('Your sort did not work')
-    
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
