@@ -11,9 +11,10 @@ rand5()
 #2
 def wordlengths(A):
    words = []
+   words.append(A)
    for ch in words[0:]:
-       print(ch)
-print(wordlengths(['cat','dog','rat']))
+       print(words.count(ch))
+wordlengths(['cat','dog','rat'])
 #3
 def lastelement(A):
     print(A[len(A)-1])
